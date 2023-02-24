@@ -1,0 +1,19 @@
+name: Run Markdown to discord
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: MarkdownToDiscord
+        uses: LittleBigRefresh/MarkdownToDiscord@v1.0.0
+        with:
+          discordToken: {{ secrets.DISCORD_TOKEN }}
+          markdownDirectory: "markdown"
