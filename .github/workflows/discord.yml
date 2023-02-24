@@ -11,7 +11,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: MarkdownToDiscord
-        uses: LittleBigRefresh/MarkdownToDiscord@v1.0.0
+        uses: LittleBigRefresh/MarkdownToDiscord@dbbd7a9
         with:
           discordToken: {{ secrets.DISCORD_TOKEN }}
           markdownDirectory: "markdown"
