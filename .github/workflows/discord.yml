@@ -13,5 +13,5 @@ jobs:
       - name: MarkdownToDiscord
         uses: LittleBigRefresh/MarkdownToDiscord@dbbd7a9
         with:
-          discordToken: {{ secrets.DISCORD_TOKEN }}
+          discordToken: ${{ secrets.DISCORD_TOKEN }}
           markdownDirectory: "markdown"
